@@ -1,0 +1,859 @@
+@charset "utf-8";
+/* Dhinchaks CSS Document */
+@font-face{
+font-family:"InterstateMonoLight";
+  src: url("../fonts/Interstate_MonoLgt.ttf"),src: url('../fonts/Interstate_MonoLgt.eot'); src: url('../fonts/Interstate_MonoLgt.eot?#iefix') format('embedded-opentype'), url('../fonts/Interstate_MonoLgt.svg#Interstate Mono Light') format('svg'), url('../fonts/Interstate_MonoLgt.woff') format('woff');
+}
+
+@font-face{
+font-family:"Monotype Corsiva";
+
+}
+html, body{
+	height: 100%; width: 100%;
+	margin: 0;
+	font-family:"InterstateMonoLight";
+}
+body{
+	background-color: #C06;
+	background:url(../images/paisley.png) repeat;
+}
+.wrapper{
+	position:absolute;
+	width: 100%; height: 100%;
+	top:0; left:0;
+}
+.main_head{
+	position:relative;	height: 130px;
+	box-shadow: 4px 4px 25px #666666;
+	
+background: url(../images/ddheader.jpg);
+background-size: 100% 130px; background-repeat: no-repeat;
+background-position-y: 0px
+}
+.m_head{
+	font-family: "Monotype Corsiva";
+	font-size: 38px;
+	position: relative;
+	display: none;
+	float: left;
+	margin-left: 15px;
+	top: 45px; line-height:30px;
+	color: #FFF;
+}
+
+.m_head span{
+	position: relative;
+	display: block;
+	top: 2px;
+	font-size: 20px;
+	
+}
+.d_logo{
+	position:relative;	height: 95px;
+	display: inline-block; float: left;
+	margin: 16px;
+	background-image:url(../../assets/images/DhinLogoFull.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width: 180px;
+}
+
+/* Navigation Style Menu */
+
+
+/* top level
+--------------------------------------------*/
+.menuTemplate1
+{
+
+    margin: 0 auto; width: 100%;float:left;
+    /*following "behavior" works for IE6, IE7, and IE8. Other browsers will ignore it.*/
+    /*Note: htc file path(if using relative path) inside the CSS file should be relative to the page, not to the CSS file (this is unlike image path inside the CSS that is relative to the CSS file location only). 
+    So we recommend using the absolute path for the behavior file.*/
+    behavior: url("/horizontal/menuh/cssmenu.htc");
+    position:relative;
+    z-index:4;
+    height: 50px;
+   /* background: #D4D4D4 url(bg.gif);*/
+   background: #ff5c5c; /* Old browsers */
+background: -moz-linear-gradient(top,  #ff5c5c 0%, #fe9090 55%, #febbbb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5c5c), color-stop(55%,#fe9090), color-stop(100%,#febbbb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ff5c5c 0%,#fe9090 55%,#febbbb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ff5c5c 0%,#fe9090 55%,#febbbb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ff5c5c 0%,#fe9090 55%,#febbbb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ff5c5c 0%,#fe9090 55%,#febbbb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5c5c', endColorstr='#febbbb',GradientType=0 ); /* IE6-9 */
+
+    border: 1px solid #BBB;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+}
+.menuTemplate1 li
+{
+    padding: 0;
+    float: left;
+    height: 49px;
+    position: relative;/*delete it if you want submenu to be positioned relative to the whole menu instead of this li element*/
+    color: #F90;
+    z-index:5;
+}
+
+.menuTemplate1 a
+{
+    padding: 0 32px;
+    line-height: 46px; /*Note: keep this value the same as the height of .menuTemplate1 li */
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    outline: 0;
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+}
+.menuTemplate1 li:hover a, .menuTemplate1 li.onhover a
+{
+/*    background: white url(bg.gif) repeat-x 0 -48px;*/
+    color: #000;
+    z-index: 9;
+}
+.menuTemplate1 a.arrow
+{
+   
+}
+ 
+        
+/*Used to align a top-level item to the right*/        
+.menuTemplate1 li.menuRight
+{
+    float: right;
+    margin-right: 0px;
+}
+        
+/*for the top-level separators*/
+.menuTemplate1 li.separator
+{
+    font-size:0;
+    overflow:hidden;
+    border-left: 1px solid #F80808;
+	border-right: 1px solid #9E0202;
+    z-index:4;
+}
+               
+        
+/* sub level
+--------------------------------------------*/
+        
+.menuTemplate1 .drop
+{
+    position: absolute;
+    z-index:15;
+    left: -9999px;
+    border: 1px solid #DDD;
+    border-bottom:3px solid #0F4F89;
+    background: #FFF;            
+    text-align: left;
+    padding: 20px;  
+    color:#0F4F89;
+    top:46px;              
+}
+
+.menuTemplate1 .drop a
+{
+    padding-left: 0px;
+    padding-right: 0px;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: normal;
+    display: inline;
+    text-align: left;
+    
+    position: static;
+    z-index: 0;
+    background-image:none;
+}
+
+.menuTemplate1 li:hover .drop, .menuTemplate1 li.onhover .drop
+{
+    left: -1px;/*Use this property to change offset of the dropdown
+    background:white url(bg-right.png) no-repeat right bottom;*/
+}
+.menuTemplate1 li:hover .dropToLeft, .menuTemplate1 li.onhover .dropToLeft
+{
+    left: auto;
+    right: -1px;
+   /* background:white url(bg-left.png) no-repeat 0 bottom;*/
+}
+.menuTemplate1 li:hover .dropToLeft2, .menuTemplate1 li.onhover .dropToLeft2
+{
+    left: auto;
+    right: -60px;
+}
+
+/* Elements within the drop down sub-menu
+--------------------------------------------*/
+
+.menuTemplate1 div.drop div div
+{
+    padding: 6px 20px;
+}
+.menuTemplate1 li:hover .drop a, .menuTemplate1 li.onhover .drop a
+{
+    background: none;
+    background-image:none;
+    padding:0 0;
+}
+.menuTemplate1 div.drop div a
+{
+    line-height: 24px;  
+    color: #0F4F89;
+    background:none;
+}
+.menuTemplate1 div.drop div a:hover
+{
+    text-decoration:underline;
+    cursor:pointer;
+    color:Red;
+}
+
+.menuTemplate1 div.left {float:left;}
+.menuTemplate1 div.right {float:right;}
+
+        
+/* CSS3 effects
+--------------------------------------------*/
+
+/*for top-level*/     
+.decor1_1 
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -moz-box-shadow: 0px 1px 4px #ccc;
+    -webkit-box-shadow: 0px 1px 4px #ccc;
+    box-shadow: 0px 1px 4px #ccc;
+            
+}
+
+/*for submenu.*/    
+.decor1_2 
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -moz-box-shadow: 0px 12px 20px #CCCCCC;
+    -webkit-box-shadow: 0px 12px 20px #CCCCCC;
+    box-shadow: 0px 12px 20px #CCCCCC;  
+}
+
+.centerdiv{
+	position:relative;
+	width: 90%; float: left;
+	left: 5%; height: 100%;
+	background: rgba(255, 255, 255, 0.65);
+	
+}
+
+
+/* Carausel */
+
+.carousel {
+	height: 500px;
+	left: 0;
+	margin-top: 2;
+	float: left;
+	width: 100%;
+}
+.carousel-inner {
+	height:500px;
+	background: rgba(204, 204, 204, 0.87);
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	width: 58%; height: 500px;
+	margin: 0 auto;	
+}
+
+.carousel-inner .item {
+    width: 100%;
+    height: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.ad1 {
+    background: url(../images/A1/3.jpg) no-repeat center center; 
+}
+.ad2 {
+    background: url(../images/rainbow_mehndi/3.jpg) no-repeat center center; 
+}
+.ad3 {
+    background: url(../images/barat/7.jpg) no-repeat center center; 
+}
+.ad4 {
+    background: url(../images/birthday/10.jpg) no-repeat center center; 
+}
+.ad5 {
+    background: url(../images/vipValima/2.jpg) no-repeat center center; 
+}
+.ad6 {
+    background: url(../images/wed/7.jpg) no-repeat center center; 
+}
+
+.bbd1 {
+    background: url(../images/birthday/3.jpg) no-repeat center center; 
+}
+.bbd2 {
+    background: url(../images/birthday/2.jpg) no-repeat center center; 
+}
+.bbd3 {
+    background: url(../images/birthday/5.jpg) no-repeat center center; 
+}
+.bbd4 {
+    background: url(../images/birthday/f1.jpeg) no-repeat center center; 
+}
+.bbd5 {
+    background: url(../images/birthday/f2.jpeg) no-repeat center center; 
+}
+.bbd6 {
+    background: url(../images/birthday/f4.jpeg) no-repeat center center; 
+}
+
+.bbd7 {
+    background: url(../images/birthday/1.jpg) no-repeat center center; 
+}
+
+.bbd8 {
+    background: url(../images/birthday/f5.jpeg) no-repeat center center; 
+}
+
+.bbd9 {
+    background: url(../images/birthday/6.jpg) no-repeat center center; 
+}
+
+.wed1{
+	background: url(../images/wedding_cards/wed.jpg) no-repeat center center; 
+}
+.wed2{
+	background: url(../images/wedding_cards/wed2.jpg) no-repeat center center; 
+}
+.wed3{
+	background: url(../images/wedding_cards/wed3.jpg) no-repeat center center; 
+}
+.wed4{
+	background: url(../images/wedding_cards/wed4.jpg) no-repeat center center; 
+}
+.wed5{
+	background: url(../images/wedding_cards/wed5.jpg) no-repeat center center; 
+	background-size: cover;
+}
+.wed6{
+	background: url(../images/wedding_cards/wed6.jpg) no-repeat center center; 
+	background-size: cover;
+}
+.wed7{
+	background: url(../images/wedding_cards/wed7.jpg) no-repeat center center; 
+	background-size: cover;
+}
+.wed8{
+	background: url(../images/wedding_cards/wed8.jpg) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed12{
+	background: url(../images/weddinginvitationcards/photo2b.JPG) no-repeat top center;
+	background-size: cover; 
+}
+
+.wed13{
+	background: url(../images/wedding_cards/wed13.jpg) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed14{
+	background: url(../images/weddinginvitationcards/photo1.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed15{
+	background: url(../images/weddinginvitationcards/photo1b.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed16{
+	background: url(../images/weddinginvitationcards/photo2.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed17{
+	background: url(../images/weddinginvitationcards/photo3.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed18{
+	background: url(../images/weddinginvitationcards/photo3b.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed19{
+	background: url(../images/weddinginvitationcards/photo4.JPG) no-repeat center center;
+	background-size: cover; 
+}
+.wed20{
+	background: url(../images/weddinginvitationcards/photo4b.JPG) no-repeat center center;
+	background-size: cover; 
+}
+
+.wed21{
+	background: url(../images/weddinginvitationcards/photo5.JPG) no-repeat center center;
+	background-size: cover; 
+}
+.wed22{
+	background: url(../images/weddinginvitationcards/photo5b.JPG) no-repeat center center;
+	background-size: cover; 
+}
+.bb01{
+	background: url(../images/boxes/dd1.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bb02{
+	background: url(../images/boxes/dd2.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bb03{
+	background: url(../images/boxes/dd3.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bb04{
+	background: url(../images/boxes/babybox.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bb05{
+	background: url(../images/boxes/babybox2.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.bb06{
+	background: url(../images/boxes/babybox6.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+
+.bg01{
+	background: url(../images/boxes/baby2.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bg02{
+	background: url(../images/boxes/boxs.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bg03{
+	background: url(../images/boxes/image_1.jpeg) no-repeat center center; 
+	background-size: contain;
+}
+
+.bg04{
+	background: url(../images/boxes/image.jpeg) no-repeat center center; 
+	background-size: contain;
+}
+
+.newbox01{
+	background: url(../images/boxes/newarivals/photo1b.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox02{
+	background: url(../images/boxes/newarivals/photo1c.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox03{
+	background: url(../images/boxes/newarivals/photo2.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox04{
+	background: url(../images/boxes/newarivals/photo2b.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox05{
+	background: url(../images/boxes/newarivals/photo2c.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox06{
+	background: url(../images/boxes/newarivals/photo3.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox07{
+	background: url(../images/boxes/newarivals/photo3b.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox08{
+	background: url(../images/boxes/newarivals/photo3c.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.newbox09{
+	background: url(../images/boxes/newarivals/photo4.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox10{
+	background: url(../images/boxes/newarivals/photo4b.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox11{
+	background: url(../images/boxes/newarivals/photo5.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox12{
+	background: url(../images/boxes/newarivals/photo5b.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.newbox13{
+	background: url(../images/boxes/newarivals/photo5c.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+
+.nikbox0{
+	background: url(../images/boxes/img1.jpg) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox1{
+	background: url(../images/boxes/nikah1.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox2{
+	background: url(../images/boxes/nikah2.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox3{
+	background: url(../images/boxes/nikah3.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox4{
+	background: url(../images/boxes/nikah6.jpg) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox5{
+	background: url(../images/boxes/nikahbidboxes/photo1.JPG) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox6{
+	background: url(../images/boxes/nikahbidboxes/photo1b.JPG) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox7{
+	background: url(../images/boxes/nikahbidboxes/photo2.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox8{
+	background: url(../images/boxes/nikahbidboxes/photo2b.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox9{
+	background: url(../images/boxes/nikahbidboxes/photo3.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox10{
+	background: url(../images/boxes/nikahbidboxes/photo3b.JPG) no-repeat center center; 
+	background-size: contain;
+}
+
+.nikbox12{
+	background: url(../images/boxes/nikahbidboxes/photo4.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox13{
+	background: url(../images/boxes/nikahbidboxes/photo4b.JPG) no-repeat center center; 
+	background-size: contain;
+}
+.nikbox14{
+	background: url(../images/boxes/nikahbidboxes/photo5.JPG) no-repeat center center; 
+	background-size: contain;
+}
+
+.carousel-caption {
+	z-index:0;
+}
+
+
+/* Item Container */
+
+.largecontent{
+	position:relative;
+	width:100%;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -moz-box-flow: row wrap;
+	background-color: rgba(179, 157, 13, 0.66);
+}
+
+.item_Container{
+	position: relative;
+	display: inline-block;
+	width: 350px; height: 300px;
+	background-color:#FFF;
+	margin: 20px auto;
+	vertical-align: top;
+	overflow:hidden;
+	border: 2px solid #F5F5F5;
+	box-shadow: 5px 5px 15px #817E7E;
+}
+
+.img_box{
+	position: relative;
+	width: 100%; height: 80%;
+}
+
+.meh_img{
+	background:url(../img/06.jpg);
+	background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.bb_img{
+	background:url(../img/07.jpg);
+	background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.bp_img{
+	background:url(../img/08.jpg);
+	background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.vipmeh_img{
+	background:url(../images/mertitimeMehndi/1.jpg);
+	background-size: contain;
+background-position: center;
+background-repeat: no-repeat;	
+}
+
+.vipmeh_img2{
+	background:url(../images/rangoliMehndi/3.jpg);
+	background-size: contain;
+background-position: center;
+background-repeat: no-repeat;	
+}
+
+.desc{
+	position: relative;
+	width: 100%;
+	font-family:"Monotype Corsiva";
+	color:#FF6600; font-size: 18px;
+	text-align:center; padding-top: 10px;
+}
+
+.articlebox{
+	position: relative;
+	width: 100%; font-size: 16px;
+	padding: 10px 20px; display:inline-block;
+}
+
+.articlebox span{
+	position: relative; display:inline-block;
+	width: 50px; height: 50px;
+	float: right; right: 10px;
+	border-radius: 50%;
+	background:#06F; color: #FFF;
+	padding-top: 14px;
+	font-size: 13px;
+	text-align: center;	
+}
+
+.slideContainer{
+    position:absolute;
+    width:100%;
+    height:50px;
+    display:block;
+    background: #FFFFFF;
+	/*rgba(204, 204, 204, 0.7);*/
+	border-top: 3px solid #F60;
+    float: left;    z-index: 5;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    transition: transform 0.2s ease-in-out;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transform: translate3d(0,20%,0);
+    -webkit-transform: translate3d(0,20%,0);
+}
+
+.show_slide{
+	-webkit-transform:translate3d(0,-100%,0) !important;
+	
+}
+
+/* Order Now Pop up */
+.on_Popup{
+	position: fixed;
+	top: 50%; left: 50%;
+	min-height: 480px;
+	z-index: 2000; width: 50%;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-ms-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;	
+	background: #FFFFFF;
+	box-shadow: 5px 5px 15px #817E7E;	
+	
+}
+
+.hide_modal{
+	-webkit-transform: scale(0) translateX(-50%) translateY(-50%);
+	-moz-transform: scale(0) translateX(-50%) translateY(-50%);
+	-ms-transform: scale(0) translateX(-50%) translateY(-50%);
+	transform: scale(0) translateX(-50%) translateY(-50%);
+	opacity: 0;	
+}
+
+.show_modal{
+	visibility: visible;
+	-webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+	-moz-transform: scale(1) translateX(-50%) translateY(-50%);
+	-ms-transform: scale(1) translateX(-50%) translateY(-50%);
+	transform: scale(1) translateX(-50%) translateY(-50%);
+	opacity: 1;
+}
+
+.cancelBtn{
+	position:relative; display:inline-block;
+	float: right; right: 10px;
+	width: 25px; height:25px;
+	border-radius: 50%; color: #666;
+	padding: 0px; font-size: 16px;
+	background-color: transparent; text-align: center;
+}
+
+.cancelBtn:hover{
+	background-color:#F33;
+	color: #FFF;
+}
+
+
+.on_head {
+position: relative;
+text-align: center;
+font-size: x-large; width: 90%;
+margin: 12px; display:inline-block;
+}
+
+.on_body{
+	position: relative;
+height: 80%; width:50%;
+float: none; margin:0 auto;
+}
+
+input{
+	width: 100%;
+	height: 40px;
+	font-size: 16px;
+	margin: 5px 0;
+}
+
+.snd_msg{
+	float: none;
+margin: 5px auto;
+position: relative;
+left: 30%;
+width: 150px;
+}
+
+.details_box{
+	position:relative;
+	float:left;
+	padding: 10px 25px;
+	width:100%;
+}
+
+.h3{
+	font-family:"Monotype Corsiva";
+	color: #FF6600;
+	font-weight: bolder;
+	float: left;
+	padding-bottom: 8px;
+	width: 100%;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.h4{
+	font-family:"Monotype Corsiva";
+	color: #C06;
+	font-weight: bolder;
+	float: left;
+	padding-bottom: 5px;
+	width: 100%;
+text-decoration: underline;
+margin-bottom: 5px;
+}
+
+.details_box p{
+	position:relative; display:block;
+	width: 100%; font-size:18px; 
+	font-family:"Monotype Corsiva";
+
+}
+
+.top_a{
+	top: 99px !important;
+}
+
+
+/* Adjust form for smaller screens */
+@media screen and (max-width: 52.5em) {
+	.m_head{
+	font-family: "Monotype Corsiva";
+	font-size: 26px;
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-left: 15px;
+	top: 45px; line-height:30px;
+	color: #FFF;
+}
+
+.m_head span{
+	position: relative;
+	display: block;
+	top: 2px;
+	font-size: 12px;
+	
+}
+}
